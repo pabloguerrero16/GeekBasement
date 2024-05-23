@@ -1,0 +1,115 @@
+[
+    {
+        "name": "Berserk, Vol. 1",
+        "price": 12,
+        "description": "En el Volumen 1, sigue los pasos de Guts, conocido por su habilidad en el combate, mientras se enfrenta a demonios y criaturas infernales. Descubre los misterios de su pasado y acompaña a este anti-héroe en su búsqueda de venganza y redención. La trama intrincada, los personajes complejos y las ilustraciones impresionantes hacen de este manga una experiencia única que cautivará a los amantes del género oscuro y de la fantasía.",
+        "ratings": 4.8,
+        "_id": "71lnvXSiITL._AC_UF1000,1000_QL80_",
+        "images": [
+            {
+                "public_id": "products/71lnvXSiITL._AC_UF1000,1000_QL80_",
+                "url": "https://m.media-amazon.com/images/I/71lnvXSiITL._AC_UF1000,1000_QL80_.jpg"
+            }
+        ],
+        "category": "Mangas",
+        "seller": "Geek Basement",
+        "stock": 50,
+        "numofReviews": 2,
+        "reviews": [
+            {
+                "name": "admin",
+                "rating": 4.0,
+                "comment": "Buena calidad"
+            },
+            {
+                "name": "Usuario2",
+                "rating": 5.0,
+                "comment": "¡Increíble!"
+            }
+        ],
+        "createdAt": "2024-01-20T12:00:00.000Z"
+    },
+    {
+        "name": "Chainsaw Man - Figura",
+        "price": 69.99,
+        "description": "Only product with affixed official Bandai Namco label has been thoroughly tested for safety and meets all North American consumer product safety regulations and entitles the purchaser to product support assistance",
+        "ratings": 3.8,
+        "_id": "61my21bmE4L._AC_SY679_",
+        "images": [
+            {
+                "public_id": "products/61my21bmE4L._AC_SY679_",
+                "url": "https://m.media-amazon.com/images/I/61my21bmE4L._AC_SY679_.jpg"
+            },
+            {
+                "public_id": "products/81YWKpyeXVL._AC_SX466_",
+                "url": "https://m.media-amazon.com/images/I/81YWKpyeXVL._AC_SX466_.jpg"
+            }
+        ],
+        "category": "Figuras",
+        "seller": "Geek Basement",
+        "stock": 30,
+        "numofReviews": 5,
+        "reviews": [
+            {
+                "name": "Usuario3",
+                "rating": 3.5,
+                "comment": "Buen producto, pero podría mejorar"
+            },
+            {
+                "name": "Usuario4",
+                "rating": 4.5,
+                "comment": "Muy satisfecho"
+            },
+            {
+                "name": "Usuario2",
+                "rating": 3.5,
+                "comment": "Buen producto, pero podría mejorar"
+            },
+            {
+                "name": "Usuario5",
+                "rating": 4.5,
+                "comment": "Muy satisfecho"
+            },
+            {
+                "name": "Usuario6",
+                "rating": 4.5,
+                "comment": "Muy satisfecho"
+            }
+        ],
+        "createdAt": "2024-01-21T10:30:00.000Z"
+    },
+    {
+        "name": "Bocchi The Rock! Temporada 1",
+        "price": 49.99,
+        "description": "Hitori Gotoh, también conocida como Bocchi, toca la guitarra con la esperanza de unirse a una banda. Y aunque es famosa en línea, lo que la detiene es que es increíblemente introvertida. Hasta que una baterista desesperada saca a Bocchi de su caparazón y la lleva al escenario.",
+        "ratings": 4.5,
+        "_id": "81SinfAVg3L._SY445_",
+        "images": [
+            {
+                "public_id": "81SinfAVg3L._SY445_",
+                "url": "https://m.media-amazon.com/images/I/81SinfAVg3L._SY445_.jpg"
+            },
+            {
+                "public_id": "products/81jK+jUogvL._SX342_",
+                "url": "https://m.media-amazon.com/images/I/81jK+jUogvL._SX342_.jpg"
+            }
+        ],
+        "category": "Bluray",
+        "seller": "Geek Basement",
+        "stock": 35,
+        "numofReviews": 2,
+        "reviews": [
+            {
+                "name": "Usuario3",
+                "rating": 3.5,
+                "comment": "Buen producto, pero podría mejorar"
+            },
+            {
+                "name": "Usuario4",
+                "rating": 4.5,
+                "comment": "Muy satisfecho"
+            }
+        ],
+        "createdAt": "2024-01-21T10:30:00.000Z"
+    }
+]
