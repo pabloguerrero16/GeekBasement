@@ -169,3 +169,29 @@ exports.logout = catchAsyncError(async (req, res, next) => {
         message: 'Logged Out'
     })
 })
+
+// ADMIN ROUTES
+
+// Get all users => /api/v1/admin/users
+exports.allUsers = catchAsyncError(async(req, res, next ) => {
+    const users = await User.find();
+
+    res.status(200).json({
+        success: true,
+        users
+    })
+})
+
+// Get specific user details => /api/v1/admin/user/:id
+exports.getUserDetails = catchAsyncError(async(req, res, next) => {
+    const user = await User.findById(req.params.id);
+
+    if(!user) {
+        return next(new ErrorHandler(`Could not find user with id: ${req.params.id}`))
+    }
+
+    res.status(200).json({
+        success: true,
+        user
+    })
+})
