@@ -1,115 +1,104 @@
 [
-    {
-        "name": "Berserk, Vol. 1",
-        "price": 12,
-        "description": "En el Volumen 1, sigue los pasos de Guts, conocido por su habilidad en el combate, mientras se enfrenta a demonios y criaturas infernales. Descubre los misterios de su pasado y acompaña a este anti-héroe en su búsqueda de venganza y redención. La trama intrincada, los personajes complejos y las ilustraciones impresionantes hacen de este manga una experiencia única que cautivará a los amantes del género oscuro y de la fantasía.",
-        "ratings": 4.8,
-        "_id": "71lnvXSiITL._AC_UF1000,1000_QL80_",
-        "images": [
-            {
-                "public_id": "products/71lnvXSiITL._AC_UF1000,1000_QL80_",
-                "url": "https://m.media-amazon.com/images/I/71lnvXSiITL._AC_UF1000,1000_QL80_.jpg"
-            }
-        ],
-        "category": "Mangas",
-        "seller": "Geek Basement",
-        "stock": 50,
-        "numofReviews": 2,
-        "reviews": [
-            {
-                "name": "admin",
-                "rating": 4.0,
-                "comment": "Buena calidad"
-            },
-            {
-                "name": "Usuario2",
-                "rating": 5.0,
-                "comment": "¡Increíble!"
-            }
-        ],
-        "createdAt": "2024-01-20T12:00:00.000Z"
-    },
-    {
-        "name": "Chainsaw Man - Figura",
-        "price": 69.99,
-        "description": "Only product with affixed official Bandai Namco label has been thoroughly tested for safety and meets all North American consumer product safety regulations and entitles the purchaser to product support assistance",
-        "ratings": 3.8,
-        "_id": "61my21bmE4L._AC_SY679_",
-        "images": [
-            {
-                "public_id": "products/61my21bmE4L._AC_SY679_",
-                "url": "https://m.media-amazon.com/images/I/61my21bmE4L._AC_SY679_.jpg"
-            },
-            {
-                "public_id": "products/81YWKpyeXVL._AC_SX466_",
-                "url": "https://m.media-amazon.com/images/I/81YWKpyeXVL._AC_SX466_.jpg"
-            }
-        ],
-        "category": "Figuras",
-        "seller": "Geek Basement",
-        "stock": 30,
-        "numofReviews": 5,
-        "reviews": [
-            {
-                "name": "Usuario3",
-                "rating": 3.5,
-                "comment": "Buen producto, pero podría mejorar"
-            },
-            {
-                "name": "Usuario4",
-                "rating": 4.5,
-                "comment": "Muy satisfecho"
-            },
-            {
-                "name": "Usuario2",
-                "rating": 3.5,
-                "comment": "Buen producto, pero podría mejorar"
-            },
-            {
-                "name": "Usuario5",
-                "rating": 4.5,
-                "comment": "Muy satisfecho"
-            },
-            {
-                "name": "Usuario6",
-                "rating": 4.5,
-                "comment": "Muy satisfecho"
-            }
-        ],
-        "createdAt": "2024-01-21T10:30:00.000Z"
-    },
-    {
-        "name": "Bocchi The Rock! Temporada 1",
-        "price": 49.99,
-        "description": "Hitori Gotoh, también conocida como Bocchi, toca la guitarra con la esperanza de unirse a una banda. Y aunque es famosa en línea, lo que la detiene es que es increíblemente introvertida. Hasta que una baterista desesperada saca a Bocchi de su caparazón y la lleva al escenario.",
-        "ratings": 4.5,
-        "_id": "81SinfAVg3L._SY445_",
-        "images": [
-            {
-                "public_id": "81SinfAVg3L._SY445_",
-                "url": "https://m.media-amazon.com/images/I/81SinfAVg3L._SY445_.jpg"
-            },
-            {
-                "public_id": "products/81jK+jUogvL._SX342_",
-                "url": "https://m.media-amazon.com/images/I/81jK+jUogvL._SX342_.jpg"
-            }
-        ],
-        "category": "Bluray",
-        "seller": "Geek Basement",
-        "stock": 35,
-        "numofReviews": 2,
-        "reviews": [
-            {
-                "name": "Usuario3",
-                "rating": 3.5,
-                "comment": "Buen producto, pero podría mejorar"
-            },
-            {
-                "name": "Usuario4",
-                "rating": 4.5,
-                "comment": "Muy satisfecho"
-            }
-        ],
-        "createdAt": "2024-01-21T10:30:00.000Z"
-    }
+  {
+    "name": "Berserk, Vol. 1",
+    "price": 12,
+    "description": "In Volume 1, follow the steps of Guts, known for his combat prowess, as he faces demons and infernal creatures. Discover the mysteries of his past and accompany this anti-hero on his quest for vengeance and redemption. The intricate plot, complex characters, and stunning illustrations make this manga a unique experience that will captivate lovers of the dark and fantasy genres.",
+    "ratings": 5.0,
+    "images": [
+      {
+        "public_id": "71lnvXSiITL",
+        "url": "https://m.media-amazon.com/images/I/71lnvXSiITL._AC_UF1000,1000_QL80_.jpg"
+      }
+    ],
+    "category": "Mangas",
+    "seller": "Geek Basement",
+    "stock": 50,
+    "numofReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Chainsaw Man - Figure",
+    "price": 69.99,
+    "description": "Only product with affixed official Bandai Namco label has been thoroughly tested for safety and meets all North American consumer product safety regulations and entitles the purchaser to product support assistance",
+    "ratings": 4.7,
+    "images": [
+      {
+        "public_id": "61my21bmE4L._AC_SY679_",
+        "url": "https://m.media-amazon.com/images/I/61my21bmE4L._AC_SY679_.jpg"
+      }
+    ],
+    "category": "Figures",
+    "seller": "Geek Basement",
+    "stock": 30,
+    "numofReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Bocchi The Rock! Season 1",
+    "price": 49.99,
+    "description": "Hitori Gotoh, also known as Bocchi, plays the guitar with the hope of joining a band. Even though she is famous online, what holds her back is her incredible introversion. That is, until a desperate drummer pulls Bocchi out of her shell and brings her onto the stage.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "704400109294",
+        "url": "https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw5365a016/Home%20Video/704400109294/BocchiTheRock!_Front.jpg"
+      }
+    ],
+    "category": "Bluray",
+    "seller": "Geek Basement",
+    "stock": 35,
+    "numofReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Bocchi the Rock!, Vol. 1 (Volume 1)",
+    "price": 15,
+    "description": "Hitori Gotoh just wants to be popular, but the idea of interacting with her classmates makes her crumble. Her solution: become such a cool rock legend that people come to her instead of her reaching out to them! However, spending all of her high school years in her closet playing guitar has only gained her anonymous fame on the internet, but it hasn't helped her social skills at all. Now in high school, Hitori feels ready to hide away and die... until she receives a sudden request to play in a band! It's like her wish is coming true, but does this anxious introvert have what it takes to perform in front of a live audience?",
+    "ratings": 4.9,
+    "images": [
+      {
+        "public_id": "products/9781975378004",
+        "url": "https://images.yenpress.com/imgs/9781975378004.jpg?w=408&h=612&type=books&s=f17751bee9f4509f78792229c88731b2"
+      }
+    ],
+    "category": "Mangas",
+    "seller": "Geek Basement",
+    "stock": 50,
+    "numofReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Bocchi the Rock!, Vol. 2 (Volume 2)",
+    "price": 15,
+    "description": "Hitori 'Bocchi' Gotoh used to play the guitar in solitude, but since Nijika dragged her into joining the band Kessoku, she has started to come out of her shell... sort of. Although she may still be a nervous wreck, with one or two shows under her belt, a part-time job, and even some real friends, those rock star ghosts don't seem so unrealistic anymore! However, the band is about to face their biggest challenge yet: performing on stage at the school festival! Will Bocchi be able to stand tall and become a rock legend, or will she embarrass herself in front of the entire student body? (Why not both?!)",
+    "ratings": 5,
+    "images": [
+      {
+        "public_id": "9781975378028",
+        "url": "https://images.yenpress.com/imgs/9781975378028.jpg?w=408&h=612&type=books&s=c2e502c25b6e2e068d8192728992f8bc"
+      }
+    ],
+    "category": "Mangas",
+    "seller": "Geek Basement",
+    "stock": 50,
+    "numofReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Bocchi the Rock!, Vol. 3 (Volume 3)",
+    "price": 15,
+    "description": "Things finally start to get serious for Hitori 'Bocchi' Gotoh as the band Kessoku sets their sights on participating in the Unidentified Riot teenage music festival. Now is the time for the group to come together and focus on getting themselves noticed, but when they face new venues and new faces, will Bocchi be able to calm her nerves enough to pull through?",
+    "ratings": 5,
+    "images": [
+      {
+        "public_id": "9781975378042",
+        "url": "https://images.yenpress.com/imgs/9781975378042.jpg?w=408&h=612&type=books&s=f2975b8f47ccd5ac332bee3d0997b83a"
+      }
+    ],
+    "category": "Mangas",
+    "seller": "Geek Basement",
+    "stock": 50,
+    "numofReviews": 0,
+    "reviews": []
+  }
 ]
