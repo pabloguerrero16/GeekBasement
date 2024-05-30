@@ -240,6 +240,8 @@ h6 {
   border: 1px solid;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .card-header,
@@ -277,11 +279,12 @@ h6 {
 
 .card-rating .stars {
   color: #ffd700; /* Gold color for stars */
-  font-size: 14px;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 .card-rating .reviews {
-  font-size: 15px;
+  font-size: 12px;
   color: #777;
 }
 
@@ -293,16 +296,22 @@ h6 {
 
 .card-body {
   padding: 0 20px 20px 20px;
+  flex-grow: 1;
 }
 
 .card-img-overlay {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
+.card-body a {
+  text-decoration: none;
+}
+
 .card-img-top {
   max-width: 100%;
-  height: auto;
+  height: 400px;
   margin-bottom: 15px;
+  object-fit: contain;
 }
 
 @media (max-width: 991px) {

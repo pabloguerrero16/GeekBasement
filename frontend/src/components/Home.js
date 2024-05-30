@@ -1,8 +1,19 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../actions/productActions";
+import Product from "./product/Product";
 import Carousel from "react-bootstrap/Carousel";
 import MetaData from "./layout/MetaData";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  const { loading, products, error, productsCount } = useSelector(
+    (state) => state.products
+  );
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
+
   return (
     <Fragment>
       <MetaData title={"Home Page"}></MetaData>
@@ -94,31 +105,19 @@ const Home = () => {
           <div className="pagetitle">
             <h1>Latest Products</h1>
           </div>
-          {/* CARD */}
-          <div className="row card-container">
-            <div className="col-lg-3">
-              <div className="card">
-                <img
-                  src="assets/img/card.jpg"
-                  className="card-img-top"
-                  alt="SanDisk Ultra"
-                ></img>
-                <div className="card-body">
-                  <h5 className="card-title">
-                    128GB Solid Storage Memory card - SanDisk Ultra
-                  </h5>
-                  <div className="card-rating">
-                    <span className="stars">★★★★☆ </span>
-                    <span className="reviews">(5 Reviews)</span>
-                  </div>
-                  <p className="card-price">$45.67</p>
-                  <a href="#" className="btn btn-primary">
-                    View Details
-                  </a>
-                </div>
+          {loading ? (
+            <h1>Loading...</h1>
+          ) : (
+            <Fragment>
+              {/* CARD */}
+              <div className="row card-container">
+                {products &&
+                  products.map((product) => (
+                    <Product key={product._id} product={product} />
+                  ))}
               </div>
-            </div>
-          </div>
+            </Fragment>
+          )}
         </section>
       </main>
     </Fragment>
