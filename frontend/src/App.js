@@ -1,8 +1,9 @@
 import "./App.css";
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Sidebar from "./components/layout/Sidebar";
-import { useState } from "react";
 import Home from "./components/Home";
 
 function App() {
@@ -13,14 +14,18 @@ function App() {
   };
 
   return (
-    <div className={`App ${isSidebarVisible ? "toggle-sidebar" : ""}`}>
-      <Header onToggleSidebar={toggleSidebar} />
-      <div className="content">
-        <Home></Home>
+    <Router>
+      <div className={`App ${isSidebarVisible ? "toggle-sidebar" : ""}`}>
+        <Header onToggleSidebar={toggleSidebar} />
+        <div className="content">
+          <Routes>
+            <Route path="/" Component={Home} exact />
+          </Routes>
+        </div>
+        <Footer />
+        <Sidebar />
       </div>
-      <Footer />
-      <Sidebar />
-    </div>
+    </Router>
   );
 }
 
