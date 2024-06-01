@@ -5,6 +5,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Sidebar from "./components/layout/Sidebar";
 import Home from "./components/Home";
+import ProductDetails from "./components/product/ProductDetails";
 
 function App() {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
@@ -20,6 +21,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" Component={Home} exact />
+            <Route path="/product/:id" Component={ProductDetails} exact />
           </Routes>
         </div>
         <Footer />

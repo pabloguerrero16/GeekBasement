@@ -1,18 +1,23 @@
 import React, { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../actions/productActions";
+import { useAlert } from "react-alert";
 import Product from "./product/Product";
+import Loader from "./layout/Loader";
 import Carousel from "react-bootstrap/Carousel";
 import MetaData from "./layout/MetaData";
 
 const Home = () => {
+  const alert = useAlert();
   const dispatch = useDispatch();
-  const { loading, products, error, productsCount } = useSelector(
-    (state) => state.products
-  );
+  const { loading, products, error } = useSelector((state) => state.products);
   useEffect(() => {
+    if (error) {
+      alert.success("Success");
+      alert.error(error);
+    }
     dispatch(getProducts());
-  }, [dispatch]);
+  }, [dispatch, alert, error]);
 
   return (
     <Fragment>
@@ -106,7 +111,7 @@ const Home = () => {
             <h1>Latest Products</h1>
           </div>
           {loading ? (
-            <h1>Loading...</h1>
+            <Loader></Loader>
           ) : (
             <Fragment>
               {/* CARD */}
