@@ -8,7 +8,7 @@ const Product = ({ product }) => {
         <img
           src={product.images[0].url}
           className="card-img-top"
-          alt="SanDisk Ultra"
+          alt={product.name}
         ></img>
         <div className="card-body">
           <Link to={`/product/${product._id}`} className="card-title">

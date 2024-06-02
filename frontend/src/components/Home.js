@@ -2,15 +2,31 @@ import React, { Fragment, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../actions/productActions";
 import { useAlert } from "react-alert";
+import Slider from "rc-slider";
 import Pagination from "react-js-pagination";
 import Product from "./product/Product";
 import Loader from "./layout/Loader";
 import Carousel from "react-bootstrap/Carousel";
 import MetaData from "./layout/MetaData";
 import { useParams } from "react-router-dom";
+import "rc-slider/assets/index.css";
+
+const createSliderWithToolTip = Slider.createSliderWithTooltip;
+const Range = createSliderWithToolTip(Slider.Range);
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [price, setPrice] = useState([1, 500]);
+  const [category, setCategory] = useState("");
+  const [rating, setRating] = useState(0);
+  const categories = [
+    "Mangas",
+    "Bluray",
+    "Figures",
+    "Shirts",
+    "Hoodies",
+    "Poster",
+  ];
   const alert = useAlert();
   const dispatch = useDispatch();
   const { loading, products, error, productsCount, resPerPage } = useSelector(
@@ -22,8 +38,8 @@ const Home = () => {
       alert.success("Success");
       alert.error(error);
     }
-    dispatch(getProducts(keyword, currentPage));
-  }, [dispatch, alert, error, keyword, currentPage]);
+    dispatch(getProducts(keyword, currentPage, price, category, rating));
+  }, [dispatch, alert, error, keyword, currentPage, price, category, rating]);
 
   function setCurrentPageNo(pageNumber) {
     setCurrentPage(pageNumber);
@@ -93,46 +109,102 @@ const Home = () => {
             </Carousel.Item>
           </Carousel>
           {/* Carousel End */}
-          <div className="row">
-            <div className="col-lg-8">
-              <div className="row">
-                <div className="col-xxl-4 col-md-6">
-                  <div className="card info-card sales-card">
-                    <div className="card-body">
-                      <h5 className="card-title"></h5>
-                      <div className="d-flex align-items-center">
-                        <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                          <i className="bi bi-folder"></i>
-                        </div>
-                        <div className="ps-3">
-                          <h6>Name of the Category</h6>
-                          <span className="text-muted small pt-2 ps-1">
-                            Description or additional info
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div className="pagetitle">
             <h1>Latest Products</h1>
           </div>
-          {loading ? (
-            <Loader></Loader>
-          ) : (
-            <Fragment>
-              {/* CARD */}
-              <div className="row card-container">
-                {products &&
-                  products.map((product) => (
-                    <Product key={product._id} product={product} />
-                  ))}
-              </div>
-            </Fragment>
-          )}
+          <div className="container-fluid">
+            <div className="row no-gutters">
+              {keyword ? (
+                <Fragment>
+                  <div className="col-12 col-md-3 mt-5 mb-5">
+                    <div className="px-5">
+                      <Range
+                        marks={{
+                          1: `$1`,
+                          500: `$500`,
+                        }}
+                        min={1}
+                        max={500}
+                        defaultValue={[1, 500]}
+                        tipFormatter={(value) => `$${value}`}
+                        tipProps={{
+                          placement: "top",
+                          visible: true,
+                        }}
+                        value={price}
+                        onChange={(price) => setPrice(price)}
+                      />
+
+                      <hr className="my-5" />
+                      <div className="mt-5">
+                        <h4 className="mb-3">Categories</h4>
+                        <ul className="pl-0">
+                          {categories.map((category) => (
+                            <li
+                              style={{
+                                cursor: "pointer",
+                                listStyleType: "none",
+                              }}
+                              key={category}
+                              onClick={() => setCategory(category)}
+                            >
+                              {category}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <hr className="my-3" />
+                      <div className="mt-5">
+                        <h4 className="mb-3">Ratings</h4>
+                        <ul className="pl-0">
+                          {[5, 4, 3, 2, 1].map((star) => (
+                            <li
+                              style={{
+                                cursor: "pointer",
+                                listStyleType: "none",
+                              }}
+                              key={star}
+                              onClick={() => setRating(star)}
+                            >
+                              <div className="rating-outer">
+                                <div
+                                  className="rating-inner"
+                                  style={{
+                                    width: `${star * 20}%`,
+                                  }}
+                                ></div>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-12 col-md-8">
+                    <div className="row card-container">
+                      {products &&
+                        products.map((product) => (
+                          <Product key={product._id} product={product} />
+                        ))}
+                    </div>
+                  </div>
+                </Fragment>
+              ) : (
+                <div className="col-12">
+                  <div className="row card-container">
+                    {products &&
+                      products.map((product) => (
+                        <Product key={product._id} product={product} />
+                      ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {loading ? <Loader></Loader> : <Fragment>{/* CARD */}</Fragment>}
         </section>
 
         {resPerPage <= productsCount && (

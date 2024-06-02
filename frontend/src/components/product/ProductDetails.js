@@ -7,7 +7,7 @@ import { getProductDetails, clearErrors } from "../../actions/productActions";
 import Loader from "../layout/Loader";
 import MetaData from "../layout/MetaData";
 
-const ProductDetails = ({}) => {
+const ProductDetails = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const alert = useAlert();
