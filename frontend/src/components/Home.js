@@ -1,23 +1,33 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../actions/productActions";
 import { useAlert } from "react-alert";
+import Pagination from "react-js-pagination";
 import Product from "./product/Product";
 import Loader from "./layout/Loader";
 import Carousel from "react-bootstrap/Carousel";
 import MetaData from "./layout/MetaData";
+import { useParams } from "react-router-dom";
 
 const Home = () => {
+  const [currentPage, setCurrentPage] = useState(1);
   const alert = useAlert();
   const dispatch = useDispatch();
-  const { loading, products, error } = useSelector((state) => state.products);
+  const { loading, products, error, productsCount, resPerPage } = useSelector(
+    (state) => state.products
+  );
+  const { keyword } = useParams();
   useEffect(() => {
     if (error) {
       alert.success("Success");
       alert.error(error);
     }
-    dispatch(getProducts());
-  }, [dispatch, alert, error]);
+    dispatch(getProducts(keyword, currentPage));
+  }, [dispatch, alert, error, keyword, currentPage]);
+
+  function setCurrentPageNo(pageNumber) {
+    setCurrentPage(pageNumber);
+  }
 
   return (
     <Fragment>
@@ -124,6 +134,23 @@ const Home = () => {
             </Fragment>
           )}
         </section>
+
+        {resPerPage <= productsCount && (
+          <div className="d-flex justify-content-center mt-5">
+            <Pagination
+              activePage={currentPage}
+              itemsCountPerPage={resPerPage}
+              totalItemsCount={productsCount}
+              onChange={setCurrentPageNo}
+              nextPageText={"Next"}
+              prevPageText={"Previous"}
+              firstPageText={"First"}
+              lastPageText={"Last"}
+              itemClass="page-item"
+              linkClass="page-link"
+            ></Pagination>
+          </div>
+        )}
       </main>
     </Fragment>
   );

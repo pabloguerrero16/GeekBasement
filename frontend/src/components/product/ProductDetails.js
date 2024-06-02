@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import { getProductDetails, clearErrors } from "../../actions/productActions";
 import Loader from "../layout/Loader";
+import MetaData from "../layout/MetaData";
 
 const ProductDetails = ({}) => {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ const ProductDetails = ({}) => {
         <Loader />
       ) : (
         <Fragment>
+          <MetaData title={product.name}></MetaData>
           <main id="main" className="main">
             <div className="row f-flex justify-content-around">
               <div className="col-12 col-lg-5 img-fluid" id="product_image">

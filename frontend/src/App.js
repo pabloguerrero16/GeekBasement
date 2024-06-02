@@ -6,6 +6,7 @@ import Footer from "./components/layout/Footer";
 import Sidebar from "./components/layout/Sidebar";
 import Home from "./components/Home";
 import ProductDetails from "./components/product/ProductDetails";
+import Search from "./components/layout/Search";
 
 function App() {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
@@ -20,8 +21,9 @@ function App() {
         <Header onToggleSidebar={toggleSidebar} />
         <div className="content">
           <Routes>
-            <Route path="/" Component={Home} exact />
-            <Route path="/product/:id" Component={ProductDetails} exact />
+            <Route path="/" element={<Home />} />
+            <Route path="/search/:keyword" element={<Home />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
           </Routes>
         </div>
         <Footer />
